@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hawaiian Pizza</title>
+  <style>
+    body {
+      background: linear-gradient(#089f42 0%, #f5d100 100%);
+      background-attachment: fixed;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 10px;
+      font-size: 50px;
+      font-family: cursive;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 35px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 200;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+    }
+
+    .extra {
+      display: block;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    button {
+      border: 1px solid #ef5a5a;
+      border-radius: 50%;
+      box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5);
+      font-size: 16px;
+      font-weight: bold;
+      color: #1c819e;
+      padding: 15px 20px;
+      background: transparent;
+      transition: all 200ms ease-in-out;
+      display: inline-block;
+    }
+
+    button:hover {
+      color: white;
+      background: #ef5a5a;
+
+      cursor: pointer;
+    }
+
+    .side {
+      display: inline-block;
+      text-align: right;
+      padding: 15px 20px 15px 400px;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 25px;
+      text-align: center;
+    }
+
+    .why {
+      font-size: 20px;
+      text-align: center;
+      line-height: 3em;
+      margin-bottom: 20px;
+    }
+
+    .restaurant {
+      text-decoration: none;
+      color: #e94822;
+    }
+
+    .restaurant:hover {
+      text-decoration: underline green;
+    }
+
+    .treasure {
+      text-decoration: none;
+      color: #e94822;
+    }
+
+    .treasure:hover {
+      text-decoration: underline green;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    Hawaiian Pizza
+    <br />
+    🍍🍕
+  </h1>
+  <h2>The Controversy! 🫢</h2>
+  <img
+    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/135/058/original/Pizza_with_pineapple.jpg?1721754374"
+    alt="Hawaiian Pizza" width="500" />
+  <hr />
+  <p>
+    <strong> Hawaiian Pizza </strong> is a Canadian created pizza that
+    includes tomato sauce, mozzarella cheese, ham and/or bacon and pineapple.
+    It was created at the
+    <a href="https://satelliterestauran.wixsite.com/satellite" target="_blank" class="restaurant">
+      Satellite Family Restaurant
+    </a>
+    in Chatham, ON, Canada in 1962!
+  </p>
+  <hr />
+  <div class="why">
+    Why is this so controversial? Because many believe that pineapple does not
+    belong on pizza
+    <span class="proPineapple">(<em>They're wrong!</em>)</span>
+    <br />
+    <a href="https://www.thecanadianencyclopedia.ca/en/article/hawaiian-pizza" target="_blank" class="treasure">
+      More about this controversial Canadian treasure!
+    </a>
+  </div>
+  <div class="extra">
+    <button>
+      PIZZA <br />
+      TIME
+    </button>
+    <span class="side">PICK A SIDE </span>
+  </div>
+  <script>
+    function join() {
+      let name = prompt("What is your name?");
+      let pizza = prompt("Do you like pineapple on your pizza?");
+      pizza = pizza.toLowerCase();
+      pizza = pizza.trim();
+
+      let sides = document.querySelector(".side");
+
+      if (
+        pizza === "yes" ||
+        pizza === "maybe" ||
+        pizza === "kind of" ||
+        pizza === "kinda"
+      ) {
+        sides.innerHTML = "Great, " + name + "! You can sit at my table!";
+      } else {
+        sides.innerHTML = "Go sit somewhere else!!";
+        alert("Sorry, " + name + "! You're missing out 😭");
+      }
+    }
+    let places = document.querySelector("button");
+    places.addEventListener("click", join);
+  </script>
+</body>
+
+</html>
